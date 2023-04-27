@@ -4,10 +4,10 @@
 #include <stdlib.h>
 
 /**
-* _strlen - get a string's Length
-* @s: given string
-* Return: Length
-*/
+  * _strlen - get a string's Length
+  * @s: given string
+  * Return: Length
+  */
 size_t _strlen(const char *s)
 {
 	size_t size;
@@ -20,11 +20,11 @@ size_t _strlen(const char *s)
 }
 
 /**
-* add_node - adds new node to head of list_t
-* @head: head node
-* @str: node's string
-* Return: pointer to new head (Success) | NULL (Failure)
-*/
+  * add_node - adds new node to head of list_t
+  * @head: head node
+  * @str: node's string
+  * Return: pointer to new head (Success) | NULL (Failure)
+  */
 list_t *add_node(list_t **head, const char *str)
 {
 	char *s;

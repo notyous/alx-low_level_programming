@@ -2,10 +2,10 @@
 #include <stddef.h>
 
 /**
-* list_len - count number of nodes in a list_t
-* @h: head node
-* Return: Length of list_t (number)
-*/
+ * list_len - count number of nodes in a list_t
+ * @h: head node
+ * Return: Length of list_t (number)
+ */
 size_t list_len(const list_t *h)
 {
 	unsigned int size;
