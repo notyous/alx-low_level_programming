@@ -3,10 +3,10 @@
 #include <stddef.h>
 
 /**
- * print_list - print elements of list_t list
- * @h: head node
- * Return: number of nodes
- */
+  * print_list - print elements of list_t list
+  * @h: head node
+  * Return: number of nodes
+  */
 size_t print_list(const list_t *h)
 {
 	unsigned int size;
