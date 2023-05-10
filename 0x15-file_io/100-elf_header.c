@@ -1,11 +1,11 @@
 #include "main.h"
 /**
- *main - displays the contents of an elf header
- *@argc:arguement count
- *@argv:argurment vector
- *Description: ./elf_header elf_file
- *Return:0 - success
- */
+*main - displays the contents of an elf header
+*@argc:arguement count
+*@argv:argurment vector
+*Description: ./elf_header elf_file
+*Return:0 - success
+*/
 int main(int argc, char *argv[])
 {
 	int fd, read_l, c;
@@ -50,9 +50,9 @@ int main(int argc, char *argv[])
 	return (0);
 }
 /**
- *elf_validation - validates whether a file is of elf format
- *@e_ident:file desc
- */
+*elf_validation - validates whether a file is of elf format
+*@e_ident:file desc
+*/
 void elf_validation(unsigned char *e_ident)
 {
 	if (e_ident[0] == 0x7f && e_ident[1] == 'E' && e_ident[2] == 'L' && e_ident[3] == 'F')
@@ -66,9 +66,9 @@ void elf_validation(unsigned char *e_ident)
 	}
 }
 /**
- *print_magic - prints an elf's magic no.
- *@e_ident:file description
- */
+*print_magic - prints an elf's magic no.
+*@e_ident:file description
+*/
 void print_magic(unsigned char *e_ident)
 {
 	int i;
@@ -83,9 +83,9 @@ void print_magic(unsigned char *e_ident)
 	printf("%02x\n", e_ident[i]);
 }
 /**
- *print_class - prints an elf's class
- *@e_ident:pointer to string
- */
+*print_class - prints an elf's class
+*@e_ident:pointer to string
+*/
 void print_class(unsigned char *e_ident)
 {
 	printf("  Class:                             ");
@@ -105,9 +105,9 @@ void print_class(unsigned char *e_ident)
 	}
 }
 /**
- *print_data - prints an elf's data
- *@e_ident: pointer to string
- */
+*print_data - prints an elf's data
+*@e_ident: pointer to string
+*/
 void print_data(unsigned char *e_ident)
 {
 	printf("  Data:                              ");
@@ -127,9 +127,9 @@ void print_data(unsigned char *e_ident)
 	}
 }
 /**
- *print_version - prints an elf's version
- *@e_ident:string pointer
- */
+*print_version - prints an elf's version
+*@e_ident:string pointer
+*/
 void print_version(unsigned char *e_ident)
 {
 	printf("  Version:                           ");
@@ -139,9 +139,9 @@ void print_version(unsigned char *e_ident)
 		printf("%i\n", e_ident[EI_VERSION]);
 }
 /**
- *print_osabi - prints an elfs osabi
- *@e_ident:string pointer
- */
+*print_osabi - prints an elfs osabi
+*@e_ident:string pointer
+*/
 void print_osabi(unsigned char *e_ident)
 {
 	printf("  OS/ABI:                            ");
@@ -182,10 +182,10 @@ void print_osabi(unsigned char *e_ident)
 	}
 }
 /**
- *print_type - prints an elfs type
- *@e_type:status int
- *@e_ident:pointer to string
- */
+*print_type - prints an elfs type
+*@e_type:status int
+*@e_ident:pointer to string
+*/
 void print_type(unsigned int e_type, unsigned char *e_ident)
 {
 	if (e_ident[EI_DATA] == ELFDATA2MSB)
@@ -214,10 +214,10 @@ void print_type(unsigned int e_type, unsigned char *e_ident)
 	}
 }
 /**
- *print_entry - prints an elf's entry
- *@e_entry:e_entry address
- *@e_ident:pointer to char string
- */
+*print_entry - prints an elf's entry
+*@e_entry:e_entry address
+*@e_ident:pointer to char string
+*/
 void print_entry(unsigned int e_entry, unsigned char *e_ident)
 {
 	if (e_ident[EI_DATA] == ELFDATA2MSB)
@@ -227,10 +227,10 @@ void print_entry(unsigned int e_entry, unsigned char *e_ident)
 	printf("%#x\n", (unsigned int)e_entry);
 }
 /**
- *lit_to_big_endian - converts hexes in little endian to big endian
- *@x:int to convert
- *Return:value in unsigned int
- */
+*lit_to_big_endian - converts hexes in little endian to big endian
+*@x:int to convert
+*Return:value in unsigned int
+*/
 unsigned int lit_to_big_endian(unsigned int x)
 {
 	return (((x >> 24) & 0x000000ff) |
